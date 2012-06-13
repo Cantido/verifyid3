@@ -1,3 +1,12 @@
+/******************************************************************************\
+ * verifyid3.c - Check a file for a valid ID3v2 header
+ * Author: Robert Richter - robert.c.richter@gmail.com
+ * Date: June 2012
+ * Description: Using the rules for an ID3v2 header given at
+ *   http://id3.org/id3v2-00, this program checks the first ten bytes of a file
+ *   and verifies the file's header.
+\******************************************************************************/
+
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
