@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* return codes */
 #define FAILURE -1
 #define SUCCESS_MATCH 0
 #define SUCCESS_NOMATCH 1
