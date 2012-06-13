@@ -34,7 +34,26 @@ int main(int argc, char *argv[]){
     exit(FAILURE);
   }
   
-  read(fd, header, 10);
+  switch (read(fd, header, 10)){
+    case 0:
+      /* read hit end-of-file */
+      printf("%s: The file %s has no content", argv[0], argv[1]);
+      exit(FAILURE);
+      break;
+    case -1:
+      /* read encountered an error */
+      perror(argv[0]);
+      exit(FAILURE);
+      break;
+    case 10:
+      /* no errors */
+      break;
+    default:
+      /* did not read 10 bytes */
+      printf("%s: could not read 10 bytes from file %s", argv[0], argv[1]);
+      exit(FAILURE);
+      break;
+  }
   
   if( header[0] == 0x49 &&
       header[1] == 0x44 &&
