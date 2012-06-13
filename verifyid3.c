@@ -60,7 +60,7 @@ int main(int argc, char *argv[]){
       header[2] == 0x33 &&
       header[3] < 0xFF &&
       header[4] < 0xFF &&
-      (header[5] & 0x3F) == 0x00 && /* sets first two bits to 0 */
+      (header[5] & 0x3F) == 0x00 && /* only first two bits can be nonzero */
       header[6] < 0x80 &&
       header[7] < 0x80 &&
       header[8] < 0x80 &&
