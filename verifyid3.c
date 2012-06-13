@@ -65,11 +65,11 @@ int main(int argc, char *argv[]){
       header[7] < 0x80 &&
       header[8] < 0x80 &&
       header[9] < 0x80){
-    printf("%s has an ID3v2 tag!\n", argv[1]);
+    printf("%s has an ID3v2 header!\n", argv[1]);
     return_code = SUCCESS_MATCH;
   }
   else{
-    printf("%s does not have an ID3v2 tag.\n", argv[1]);
+    printf("%s does not have an ID3v2 header.\n", argv[1]);
     return_code = SUCCESS_NOMATCH;
   }
   
