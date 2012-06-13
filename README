@@ -1,0 +1,4 @@
+Verifies if a file has a proper ID3v2 header. That means also that the file
+is probably an MP3.
+
+The informal standard for ID3v2 is given at http://id3.org/id3v2-00
